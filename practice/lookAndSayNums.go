@@ -18,13 +18,13 @@ func lookAndSay(num string)string{
 		}else{
 			count++
 		} 
-
 	}
 	return tmp
 }
 
 func main(){
-	s := "1"
+	var s string
+	fmt.Scanf("%s",&s)
 	var iters int
 	fmt.Scanf("%d",&iters)
 	for iters > 0{
