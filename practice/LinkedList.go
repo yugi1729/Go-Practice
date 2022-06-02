@@ -1,38 +1,38 @@
-package main 
+package main
 
 import (
 	"fmt"
 	"strconv"
 )
 
-type Node struct{
+type Node struct {
 	value int
-	next *Node
+	next  *Node
 }
 
-type LinkedList struct{
+type LinkedList struct {
 	head *Node
 	tail *Node
 }
 
-func (list *LinkedList) addNode(value int){
+func (list *LinkedList) addNode(value int) {
 	newNode := Node{value, nil}
-	if list.head == nil{
+	if list.head == nil {
 		list.head = &newNode
 		list.tail = &newNode
-	}else{
+	} else {
 		list.tail.next = &newNode
 		list.tail = &newNode
 	}
 }
 
-func (list *LinkedList) printList(){
+func (list *LinkedList) printList() {
 	current := list.head
 	output := ""
-	for current != nil{
-		if current.next != nil{
+	for current != nil {
+		if current.next != nil {
 			output = output + strconv.Itoa(current.value) + "->"
-		}else {
+		} else {
 			output = output + strconv.Itoa(current.value)
 		}
 		current = current.next
@@ -40,9 +40,9 @@ func (list *LinkedList) printList(){
 	fmt.Println(output)
 }
 
-func (list *LinkedList) deleteNode(){
+func (list *LinkedList) deleteNode() {
 	current := list.head
-	for current.next != list.tail{
+	for current.next != list.tail {
 		current = current.next
 	}
 	current.next = nil
@@ -50,7 +50,7 @@ func (list *LinkedList) deleteNode(){
 }
 
 // driver function
-func main(){
+func main() {
 	list := LinkedList{nil, nil}
 	list.addNode(1)
 	list.addNode(2)

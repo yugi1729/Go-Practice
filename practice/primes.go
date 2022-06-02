@@ -1,11 +1,11 @@
-package main 
+package main
 
 import "fmt"
 
-func isPrime(n int) bool{
+func isPrime(n int) bool {
 	p := true
 	for i := 2; i < n; i++ {
-		if n % i == 0 {
+		if n%i == 0 {
 			p = false
 		}
 	}
@@ -18,7 +18,7 @@ func printPrimes(num int) {
 			fmt.Println(i)
 		}
 	}
-}	
+}
 
 func main() {
 	printPrimes(20)

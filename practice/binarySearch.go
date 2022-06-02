@@ -20,8 +20,7 @@ func binarySearch(arr []int, target int) int {
 	return -1
 }
 
-
-func main(){
+func main() {
 	arr := []int{1, 2, 3, 5, 6}
 	fmt.Println(binarySearch(arr, 5))
 }

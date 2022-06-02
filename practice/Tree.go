@@ -5,8 +5,8 @@ import (
 )
 
 type Node struct {
-	data int
-	left *Node
+	data  int
+	left  *Node
 	right *Node
 }
 
@@ -32,9 +32,7 @@ func displayTree(root *Node) {
 	displayTree(root.right)
 }
 
-
-
-func main(){
+func main() {
 	root := &Node{8, nil, nil}
 	addNode(root, 8)
 	addNode(root, 9)
@@ -42,4 +40,3 @@ func main(){
 	addNode(root, 2)
 	displayTreeLevel(root)
 }
-
